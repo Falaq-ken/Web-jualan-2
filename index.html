@@ -78,7 +78,7 @@
       const navMenu = document.getElementById("nav-menu");
 
      
-      for (let i = 1; i <= 20; i++) {
+      for (let i = 0; i <= 20; i++) {
         const option = document.createElement("option");
         option.value = i;
         option.textContent = i;
@@ -93,7 +93,11 @@
       document.getElementById("checkout-btn").addEventListener("click", function () {
         const jumlah = parseInt(selectJumlah.value);
         if (jumlah < 1) {
-          alert("Pilih jumlah terlebih dahulu!");
+          Swal.fire({
+          title: "Pesanan masih kosong!",
+          text: "silahkan isi dulu",
+          icon: "error"
+        });
           return;
         }
 
@@ -105,6 +109,7 @@
       });
     });
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>
