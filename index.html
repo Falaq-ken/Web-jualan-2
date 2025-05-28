@@ -102,7 +102,7 @@
         }
 
         const total = hargaProduk * jumlah;
-        const pesan = `*Pesanan dari KEDAI MELETUPZ*\n\n====================\n*Daftar Pesanan:*\n- Bakso Mercon x${jumlah} — Rp${total.toLocaleString()}\n====================\n*Total Pembayaran:* Rp${total.toLocaleString()}\n\nTerima kasih udah pesen!\nKami secepat mungkin hubungi kamu.`;
+        const pesan = `*Pesanan dari KEDAI MELETUPZ*\n\n====================\n*Daftar Pesanan:*\n- Bakso Mercon x${jumlah} — Rp${total.toLocaleString()}\n====================\n*Total Pembayaran:* Rp${total.toLocaleString()}\n\n\n*Pembayaran hanya bisa COD*\nTerima kasih udah pesen!\nKami secepat mungkin hubungi kamu.`;
 
         const url = "https://wa.me/6285719262088?text=" + encodeURIComponent(pesan);
         window.open(url, "_blank");
